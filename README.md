@@ -1,4 +1,3 @@
-# hello-world
-something new
+# SevconUtility
 
-I will commit electric boat project. But now I just test
+Tools to setup gen4Size10 inverters
