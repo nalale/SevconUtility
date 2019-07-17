@@ -1,0 +1,277 @@
+﻿<Window x:Class="S10_Software.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:S10_Software"
+        mc:Ignorable="d"
+        Title="S10_Software" Height="383.716" Width="525">
+    <StackPanel>
+        <GroupBox Header="">
+            <StackPanel Margin="10,10,0,2" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Label Content="Node ID: " HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Width="57" Margin="0,0,20,0"/>
+                <ComboBox x:Name="cbNodesList" Margin="0,0,0,-2" HorizontalAlignment="Left" Width="50" DropDownOpened="cbNodeListDrop_Handle" SelectionChanged="cbNodeSelected_Handle"/>
+                <TextBox x:Name="tbNewNodeId" Margin="100,0,0,0" HorizontalAlignment="Left" Width="50" />
+                <Button x:Name="btnChangeNodeId" Content="Change ID" Margin="20, 0, 0, 0" Click="btnChangeID_ClickHandler"/>
+            </StackPanel>
+        </GroupBox>
+        <TabControl Name="tc_Tabs" SelectionChanged="tc_Tabs_SelectionChanged">
+            <TabItem Header="Lm Map" IsSelected="True">
+                <StackPanel Margin="0">
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt1 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt1Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt1 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt1Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt2 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt2Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt2 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt2Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt3 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt3Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt3 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt3Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt4 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt4Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt4 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt4Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt5 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt5Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt5 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt5Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt6 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt6Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt6 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt6Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt7 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt7Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt7 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt7Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt8 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt8Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt8 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt8Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt9 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt9Current" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt9 Mag Inductance, puH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt9Inductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Flux Map">
+                <StackPanel Height="216">
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt1 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt1Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt1 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt1FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt2 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt2Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt2 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt2FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt3 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt3Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt3 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt3FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt4 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt4Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt4 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt4FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt5 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt5Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt5 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt5FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt6 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt6Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt6 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt6FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt7 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt7Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt7 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt7FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt8 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt8Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt8 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt8FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt9 Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt9Torque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt9 Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt9FluxCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Power Map" Margin="-2,0">
+                <StackPanel Height="216">
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt1 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt1MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt1 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt1Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt2 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt2MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt2 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt2Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt3 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt3MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt3 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt3Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt4 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt4MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt4 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt4Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt5 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt5MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt5 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt5Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt6 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt6MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt6 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt6Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt7 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt7MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt7 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt7Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt8 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt8MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt8 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt8Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Pt9 Max Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbPt9MaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Pt9 Speed, rpm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,5,0"/>
+                        <TextBox Name="tbPt9Speed" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Motor Data" Margin="-2,0">
+                <StackPanel Height="216">
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Max Stator Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,33,0"/>
+                        <TextBox Name="tbMaxStCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Min Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="15,0,40,0"/>
+                        <TextBox Name="tbMinMagCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Max Mag Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,40,0"/>
+                        <TextBox Name="tbMaxMagCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Mag Inductance, uH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="15,0,57,0"/>
+                        <TextBox Name="tbMagInductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Stator Leakage Inductance, uH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0"/>
+                        <TextBox Name="tbStLeakInductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Rotor Leakage Inductance, uH" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="15,0,5,0"/>
+                        <TextBox Name="tbRtLeakInductance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Stator Resistance, mOhm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,34,0"/>
+                        <TextBox Name="tbStResistance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Rotor Resistance, mOhms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="15,0,29,0"/>
+                        <TextBox Name="tbRtResistance" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Rated Stator Current, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,24,0"/>
+                        <TextBox Name="tbRatedCurrent" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Im Rated, A" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="15,0,103,0"/>
+                        <TextBox Name="tbImRated" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Ls/Ls'" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,137,0"/>
+                        <TextBox Name="tbLsLs" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Id recovery rate, A/s" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="15,0,58,0"/>
+                        <TextBox Name="tbIdRecoveryRate" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Current Kp" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,109,0" Height="20" VerticalAlignment="Top"/>
+                        <TextBox x:Name="tbCurrenKp" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Current Ki" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="15,0,111,0"/>
+                        <TextBox x:Name="tbCurrentKi" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Mod Index Kp" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,92,0"/>
+                        <TextBox x:Name="tbModIndexKp" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Mod Index Ki" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="15,0,94,0"/>
+                        <TextBox x:Name="tbModIndexKi" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Gains" Margin="-2,0">
+                <StackPanel Height="216">
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Speed Kp" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,66,0"/>
+                        <TextBox Name="tbSpeedKp" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Speed Ki" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,90,0"/>
+                        <TextBox Name="tbSpeedKi" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Peak Torque, Nm" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,26,0"/>
+                        <TextBox Name="tbPeakTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Max Torque, % of peak" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,15,0"/>
+                        <TextBox Name="tbMaxTorque" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,2" Height="20" Orientation="Horizontal">
+                        <Label Content="Current Limit, Arms" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="5,0,14,0"/>
+                        <TextBox Name="tbCurrentLimit" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                        <Label Content="Torque Slope, % rated/s" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" Margin="50,0,10,0"/>
+                        <TextBox x:Name="tbTorqueSlope" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="68" Margin="0" KeyDown="ValueIsChanged_Handler"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        <DockPanel Margin="0,2,6,2" Height="20" HorizontalAlignment="Center" >
+            <Button x:Name="btnRead" Content="Read" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="5,0,20,0" Click="btnRead_ClickHandler"/>
+            <Button Content="Load" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="5,0,55,0" Click="btnLoad_ClickHandler"/>
+        </DockPanel>
+        <StatusBar>
+            <Label Content="CAN dongle: " FontSize="10"/>
+            <TextBlock Name="tbCanAdapter" FontSize="10"/>
+        </StatusBar>
+    </StackPanel>
+</Window>
